@@ -1,0 +1,8 @@
+---
+import VisualizerLayout from '../../layouts/VisualizerLayout.astro';
+import { UnionFindVisualizerPage } from '../../components/visualizer/UnionFindVisualizerPage';
+---
+
+<VisualizerLayout title="Union-Find">
+  <UnionFindVisualizerPage client:load algorithmSlug="union-find" />
+</VisualizerLayout>

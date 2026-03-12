@@ -1,0 +1,101 @@
+import type { GraphInput } from '../algorithms/graph/types';
+
+export const graphPresets: Record<string, GraphInput> = {
+  small: {
+    nodes: [
+      { id: 'A', label: 'A', x: 0.5, y: 0.1 },
+      { id: 'B', label: 'B', x: 0.2, y: 0.35 },
+      { id: 'C', label: 'C', x: 0.8, y: 0.35 },
+      { id: 'D', label: 'D', x: 0.15, y: 0.7 },
+      { id: 'E', label: 'E', x: 0.5, y: 0.7 },
+      { id: 'F', label: 'F', x: 0.85, y: 0.7 },
+    ],
+    edges: [
+      { from: 'A', to: 'B' },
+      { from: 'A', to: 'C' },
+      { from: 'B', to: 'D' },
+      { from: 'B', to: 'E' },
+      { from: 'C', to: 'E' },
+      { from: 'C', to: 'F' },
+      { from: 'D', to: 'E' },
+      { from: 'E', to: 'F' },
+    ],
+    startNodeId: 'A',
+    directed: false,
+  },
+
+  medium: {
+    nodes: [
+      { id: 'A', label: 'A', x: 0.5, y: 0.08 },
+      { id: 'B', label: 'B', x: 0.2, y: 0.28 },
+      { id: 'C', label: 'C', x: 0.8, y: 0.28 },
+      { id: 'D', label: 'D', x: 0.08, y: 0.55 },
+      { id: 'E', label: 'E', x: 0.38, y: 0.55 },
+      { id: 'F', label: 'F', x: 0.62, y: 0.55 },
+      { id: 'G', label: 'G', x: 0.92, y: 0.55 },
+      { id: 'H', label: 'H', x: 0.5, y: 0.85 },
+    ],
+    edges: [
+      { from: 'A', to: 'B' },
+      { from: 'A', to: 'C' },
+      { from: 'B', to: 'D' },
+      { from: 'B', to: 'E' },
+      { from: 'C', to: 'F' },
+      { from: 'C', to: 'G' },
+      { from: 'D', to: 'E' },
+      { from: 'E', to: 'F' },
+      { from: 'F', to: 'G' },
+      { from: 'D', to: 'H' },
+      { from: 'E', to: 'H' },
+      { from: 'G', to: 'H' },
+    ],
+    startNodeId: 'A',
+    directed: false,
+  },
+
+  'tree-like': {
+    nodes: [
+      { id: 'A', label: 'A', x: 0.5, y: 0.08 },
+      { id: 'B', label: 'B', x: 0.25, y: 0.35 },
+      { id: 'C', label: 'C', x: 0.75, y: 0.35 },
+      { id: 'D', label: 'D', x: 0.12, y: 0.65 },
+      { id: 'E', label: 'E', x: 0.38, y: 0.65 },
+      { id: 'F', label: 'F', x: 0.62, y: 0.65 },
+      { id: 'G', label: 'G', x: 0.88, y: 0.65 },
+    ],
+    edges: [
+      { from: 'A', to: 'B' },
+      { from: 'A', to: 'C' },
+      { from: 'B', to: 'D' },
+      { from: 'B', to: 'E' },
+      { from: 'C', to: 'F' },
+      { from: 'C', to: 'G' },
+    ],
+    startNodeId: 'A',
+    directed: false,
+  },
+
+  dag: {
+    nodes: [
+      { id: 'A', label: 'A', x: 0.15, y: 0.1 },
+      { id: 'B', label: 'B', x: 0.55, y: 0.1 },
+      { id: 'C', label: 'C', x: 0.08, y: 0.45 },
+      { id: 'D', label: 'D', x: 0.38, y: 0.45 },
+      { id: 'E', label: 'E', x: 0.7, y: 0.45 },
+      { id: 'F', label: 'F', x: 0.25, y: 0.85 },
+      { id: 'G', label: 'G', x: 0.6, y: 0.85 },
+    ],
+    edges: [
+      { from: 'A', to: 'C' },
+      { from: 'A', to: 'D' },
+      { from: 'B', to: 'D' },
+      { from: 'B', to: 'E' },
+      { from: 'C', to: 'F' },
+      { from: 'D', to: 'F' },
+      { from: 'D', to: 'G' },
+      { from: 'E', to: 'G' },
+    ],
+    startNodeId: 'A',
+    directed: true,
+  },
+};

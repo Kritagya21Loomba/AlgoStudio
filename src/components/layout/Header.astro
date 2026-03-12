@@ -1,0 +1,119 @@
+---
+import { ThemeToggle } from '../ui/ThemeToggle';
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 h-14 flex items-center justify-between px-6
+               border-b border-[var(--color-border)] bg-[var(--color-glass)] backdrop-blur-md">
+  <div class="flex items-center gap-8">
+    <a href="/" class="font-display text-2xl tracking-wide text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors">
+      A+DS
+    </a>
+    <nav class="hidden sm:flex items-center gap-1 text-sm">
+      <!-- Sorting dropdown -->
+      <div class="group relative">
+        <button class="px-3 py-1.5 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors cursor-pointer">
+          Sorting <span class="text-xs opacity-60">▾</span>
+        </button>
+        <div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
+          <div class="flex flex-col w-48 rounded-xl border border-[var(--color-glass-border)] bg-[var(--color-glass)] backdrop-blur-md p-1.5 shadow-xl">
+            <a href="/sorting/bubble-sort" class="nav-dropdown-item" data-astro-reload>Bubble Sort</a>
+            <a href="/sorting/insertion-sort" class="nav-dropdown-item" data-astro-reload>Insertion Sort</a>
+            <a href="/sorting/selection-sort" class="nav-dropdown-item" data-astro-reload>Selection Sort</a>
+            <a href="/sorting/merge-sort" class="nav-dropdown-item" data-astro-reload>Merge Sort</a>
+            <a href="/sorting/quick-sort" class="nav-dropdown-item" data-astro-reload>Quick Sort</a>
+            <a href="/sorting/heap-sort" class="nav-dropdown-item" data-astro-reload>Heap Sort</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Searching -->
+      <a href="/searching/binary-search" data-astro-reload
+         class="px-3 py-1.5 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors">
+        Binary Search
+      </a>
+
+      <!-- Graph dropdown -->
+      <div class="group relative">
+        <button class="px-3 py-1.5 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors cursor-pointer">
+          Graph <span class="text-xs opacity-60">▾</span>
+        </button>
+        <div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
+          <div class="flex flex-col w-48 rounded-xl border border-[var(--color-glass-border)] bg-[var(--color-glass)] backdrop-blur-md p-1.5 shadow-xl">
+            <a href="/graph/bfs" class="nav-dropdown-item" data-astro-reload>BFS</a>
+            <a href="/graph/dfs" class="nav-dropdown-item" data-astro-reload>DFS</a>
+            <a href="/graph/dijkstra" class="nav-dropdown-item" data-astro-reload>Dijkstra</a>
+            <a href="/graph/topo-sort" class="nav-dropdown-item" data-astro-reload>Topological Sort</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tree dropdown -->
+      <div class="group relative">
+        <button class="px-3 py-1.5 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors cursor-pointer">
+          Tree <span class="text-xs opacity-60">▾</span>
+        </button>
+        <div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
+          <div class="flex flex-col w-48 rounded-xl border border-[var(--color-glass-border)] bg-[var(--color-glass)] backdrop-blur-md p-1.5 shadow-xl">
+            <a href="/tree/bst" class="nav-dropdown-item" data-astro-reload>BST</a>
+            <a href="/tree/avl" class="nav-dropdown-item" data-astro-reload>AVL Tree</a>
+            <a href="/tree/rb-tree" class="nav-dropdown-item" data-astro-reload>Red-Black Tree</a>
+            <a href="/tree/seg-tree" class="nav-dropdown-item" data-astro-reload>Segment Tree</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hashing dropdown -->
+      <div class="group relative">
+        <button class="px-3 py-1.5 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors cursor-pointer">
+          Hashing <span class="text-xs opacity-60">▾</span>
+        </button>
+        <div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50">
+          <div class="flex flex-col w-48 rounded-xl border border-[var(--color-glass-border)] bg-[var(--color-glass)] backdrop-blur-md p-1.5 shadow-xl">
+            <a href="/hashing/linear-probing" class="nav-dropdown-item" data-astro-reload>Linear Probing</a>
+            <a href="/hashing/quadratic-probing" class="nav-dropdown-item" data-astro-reload>Quadratic Probing</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- String -->
+      <a href="/string/kmp" data-astro-reload
+         class="px-3 py-1.5 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors">
+        KMP Search
+      </a>
+
+      <!-- Union-Find -->
+      <a href="/union-find" data-astro-reload
+         class="px-3 py-1.5 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors">
+        Union-Find
+      </a>
+
+      <!-- Complexity Explorer -->
+      <a href="/tools/complexity" data-astro-reload
+         class="px-3 py-1.5 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors">
+        Complexity
+      </a>
+
+      <!-- Compare Mode -->
+      <a href="/tools/compare" data-astro-reload
+         class="px-3 py-1.5 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-colors">
+        Compare
+      </a>
+    </nav>
+  </div>
+  <ThemeToggle client:load />
+</header>
+
+<style>
+  .nav-dropdown-item {
+    display: block;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    color: var(--color-text-muted);
+    transition: all 150ms;
+    font-size: 0.875rem;
+  }
+  .nav-dropdown-item:hover {
+    color: var(--color-text);
+    background: var(--color-surface);
+  }
+</style>

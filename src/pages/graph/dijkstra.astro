@@ -1,0 +1,8 @@
+---
+import VisualizerLayout from '../../layouts/VisualizerLayout.astro';
+import { DijkstraVisualizerPage } from '../../components/visualizer/DijkstraVisualizerPage';
+---
+
+<VisualizerLayout title="Dijkstra's Algorithm">
+  <DijkstraVisualizerPage client:load algorithmSlug="dijkstra" />
+</VisualizerLayout>

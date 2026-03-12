@@ -1,0 +1,17 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <Header />
+  <main class="pt-14 min-h-screen">
+    <slot />
+  </main>
+</BaseLayout>

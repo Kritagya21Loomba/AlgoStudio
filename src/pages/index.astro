@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/layout/Header.astro';
+import { Hero } from '../components/landing/Hero';
+import { AlgoCardGrid } from '../components/landing/AlgoCardGrid';
+---
+
+<BaseLayout title="Home" description="Interactive algorithms & data structures visualizer. See algorithms come alive with step-by-step animations.">
+  <Header />
+  <main class="pt-14">
+    <!-- Server-rendered hero fallback (visible until React hydrates) -->
+    <section id="hero-fallback" class="hero-fallback">
+      <div class="hero-inner">
+        <div>
+          <h1 class="hero-title">A+DS</h1>
+          <p class="hero-subtitle">
+            See algorithms come alive. Interactive visualizations, step-by-step
+            walkthroughs, and editorial-grade design — built for students.
+          </p>
+          <a href="/sorting/bubble-sort" class="hero-cta">
+            Start Learning
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <Hero client:load />
+
+    <!-- Algorithm cards with live mini animations -->
+    <section class="max-w-5xl mx-auto px-6 py-20">
+      <h2 class="font-display text-5xl tracking-wide mb-4 text-[var(--color-text)]">
+        Explore Algorithms
+      </h2>
+      <p class="text-[var(--color-text-muted)] mb-12 max-w-lg">
+        Dive into interactive visualizations with synced pseudocode, step-by-step controls,
+        and complexity analysis.
+      </p>
+
+      <AlgoCardGrid client:visible />
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  /* Hero fallback — visible instantly, hidden once React hydrates */
+  .hero-fallback {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 1.5rem;
+  }
+  .hero-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 1;
+    letter-spacing: 0.025em;
+    color: var(--color-text);
+  }
+  .hero-subtitle {
+    margin-top: 1rem;
+    font-size: 1.125rem;
+    color: var(--color-text-muted);
+    max-width: 28rem;
+  }
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    background: var(--color-accent);
+    color: white;
+    font-weight: 500;
+    font-size: 0.875rem;
+    transition: opacity 200ms;
+  }
+  .hero-cta:hover { opacity: 0.9; }
+</style>

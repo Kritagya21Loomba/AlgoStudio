@@ -1,0 +1,8 @@
+---
+import VisualizerLayout from '../../layouts/VisualizerLayout.astro';
+import { AVLVisualizerPage } from '../../components/visualizer/AVLVisualizerPage';
+---
+
+<VisualizerLayout title="AVL Tree">
+  <AVLVisualizerPage client:load algorithmSlug="avl" />
+</VisualizerLayout>

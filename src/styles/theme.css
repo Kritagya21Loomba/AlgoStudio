@@ -1,0 +1,52 @@
+/* ===========================
+   Theme CSS Custom Properties
+   =========================== */
+
+:root,
+[data-theme="light"] {
+  --color-bg: #f5f0eb;
+  --color-surface: #ffffff;
+  --color-surface-alt: #ece5dc;
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b6b6b;
+  --color-accent: #e63946;
+  --color-accent-secondary: #457b9d;
+  --color-highlight: #ffd166;
+  --color-success: #06d6a0;
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-glass: rgba(255, 255, 255, 0.6);
+  --color-glass-border: rgba(0, 0, 0, 0.06);
+  --grain-opacity: 0.03;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0f0f0f;
+  --color-surface: #1a1a1a;
+  --color-surface-alt: #252525;
+  --color-text: #f5f0eb;
+  --color-text-muted: #8a8a8a;
+  --color-accent: #ff6b6b;
+  --color-accent-secondary: #64b5f6;
+  --color-highlight: #ffd166;
+  --color-success: #06d6a0;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-glass: rgba(30, 30, 30, 0.6);
+  --color-glass-border: rgba(255, 255, 255, 0.06);
+  --grain-opacity: 0.05;
+}
+
+[data-theme="beige"] {
+  --color-bg: #e8dfd0;
+  --color-surface: #f2ebe0;
+  --color-surface-alt: #d9cfc0;
+  --color-text: #2c2416;
+  --color-text-muted: #7a6e5d;
+  --color-accent: #c44536;
+  --color-accent-secondary: #5b8a72;
+  --color-highlight: #e8b931;
+  --color-success: #06d6a0;
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-glass: rgba(232, 223, 208, 0.6);
+  --color-glass-border: rgba(0, 0, 0, 0.04);
+  --grain-opacity: 0.04;
+}
